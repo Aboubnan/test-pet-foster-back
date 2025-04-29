@@ -1,0 +1,46 @@
+{
+	"name": "pet-foster-connect-back",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app.js",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "node --watch --env-file=.env app.js",
+		"db:sync": "node --env-file=.env ./src/migrations/create-tables-sequelize.js",
+		"db:seed": "node --env-file=.env ./src/migrations/seed-tables-sequelize.js",
+		"db:reset": "npm run db:sync && npm run db:seed",
+		"format": "pnpx @biomejs/biome format ./",
+		"format:fix": "pnpx @biomejs/biome format --write ./",
+		"lint": "pnpx @biomejs/biome lint ./",
+		"lint:fix": "pnpx @biomejs/biome lint --write ./",
+		"check": "pnpx @biomejs/biome check ./",
+		"check:fix": "pnpx @biomejs/biome check --write ./"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/O-clock-Samoussas/pet-foster-connect-back.git"
+	},
+	"keywords": ["pet", "foster", "backend", "api"],
+	"author": "ABDER DEN DUANEE GWEN",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/O-clock-Samoussas/pet-foster-connect-back/issues"
+	},
+	"homepage": "https://github.com/O-clock-Samoussas/pet-foster-connect-back#readme",
+	"dependencies": {
+		"bcryptjs": "^3.0.2",
+		"biome": "^0.3.3",
+		"cors": "^2.8.5",
+		"express": "^5.1.0",
+		"express-session": "^1.18.1",
+		"jsonwebtoken": "^9.0.2",
+		"pg": "^8.15.5",
+		"sanitize-html": "^2.16.0",
+		"sequelize": "^6.37.7",
+		"zod": "^3.24.3"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4"
+	}
+}
