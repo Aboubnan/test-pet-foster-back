@@ -6,6 +6,7 @@
 	"type": "module",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "node --watch app.js",
 		"db:sync": "node --env-file=.env ./src/migrations/create-tables-sequelize.js",
 		"db:seed": "node --env-file=.env ./src/migrations/seed-tables-sequelize.js",
 		"db:reset": "npm run db:sync && npm run db:seed",
